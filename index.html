@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loading animation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: cursive;
+        }
+        html{
+            font-size: 62.5%;
+        }
+        .main-div{
+            width: 100vw;
+            height: 100vh;
+            background-color: #3e5fa0;
+            display: grid;
+            place-items: center;
+        }
+        .center{
+            width: 15rem;
+            height: 15rem;
+            
+            position: relative;
+            /* display: grid;
+            place-items: center; */
+        }
+        .one{
+            width: 15rem;
+            height: 15rem;
+            position: absolute;
+            border-right: 0.35rem solid #fff;
+            border-radius: 50%;
+            animation: rot 2s linear infinite;
+        }
+        @keyframes rot {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        h1{
+            color: #fff;
+            cursor: pointer;
+            letter-spacing: 0.15rem;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <div class="center">
+            <div class="one"></div>
+            <h1>loading</h1>
+        </div>
+    </div>
+</body>
+</html>
